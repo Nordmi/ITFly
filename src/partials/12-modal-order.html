@@ -1,0 +1,47 @@
+<div class="modal-order" is-open data-modal>
+  <button>
+    <svg><use></use></svg>
+  </button>
+  <h2></h2>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<form class="form-message">
+  <label class="">
+    <span
+      ><input
+        type="text"
+        name="user_name"
+        class="modal-form-input"
+        required
+        pattern="[a-zA-Zа-яА-Я]+"
+        minlength="2"
+    /></span>
+  </label>
+  <label class="">
+    <span>
+      <input
+        type="tel"
+        name="user_phone"
+        class="modal-form-input"
+        required
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+        title="xxx-xxx-xx-xx"
+      />
+    </span>
+  </label>
+  <label class="">
+    <span>
+      <textarea
+        name="user_message"
+        class="modal-form-message"
+        placeholder="Введите текст"
+      >
+      </textarea>
+    </span>
+  </label>
+  <button></button>
+</form>
