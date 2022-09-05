@@ -1,8 +1,8 @@
 (() => {
   const refs = {
-    openFillingBtn: document.querySelector('[data-ingredients-open]'),
-    closeFillingBtn: document.querySelector('[data-ingredients-close]'),
-    filling: document.querySelector('[data-ingredients]'),
+    openFillingBtn: document.querySelector('[data-products-open]'),
+    closeFillingBtn: document.querySelector('[data-products-close]'),
+    filling: document.querySelector('[data-products]'),
   };
   refs.openFillingBtn.addEventListener('click', toggleModal);
   refs.closeFillingBtn.addEventListener('click', toggleModal);
