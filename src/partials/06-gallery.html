@@ -16,15 +16,19 @@
         "
         media="(min-width: 768px)"
       />
-      <!-- <img src="../src/images/gallery/mobile/gallery-ice.jpg" alt="gallery-foto"/> -->
-      <img class="img-gallery"
+
+      <source
         srcset="
-                                ../src/images/gallery/mobile/gallery-ice.jpg  1x,
-                                   ../src/images/gallery/mobile/gallery-ice@2x.jpg 2x
-                                    srs = ../src/images/gallery/mobile/gallery-ice.jpg
-                                        "
+          ../src/images/gallery/mobile/gallery-ice.jpg    1x,
+          ../src/images/gallery/mobile/gallery-ice@2x.jpg 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <!-- <img src="../src/images/gallery/mobile/gallery-ice.jpg" alt="gallery-foto"/> -->
+      <img
+        class="img-gallery"
+        src="images/gallery/mobile/gallery-ice.jpg"
         alt="gallery"
-        loading="lazy"
       />
     </picture>
   </div>
