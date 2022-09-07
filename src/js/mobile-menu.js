@@ -22,3 +22,18 @@
       refsBuyNow.body.classList.toggle('no-scroll');
     }
   })();
+
+  (() => {
+    const refsBuyNow = {
+      openModalhtn: document.querySelector('[data-modalh2-open]'),
+      closeModalhtn: document.querySelector('[data-modalhm-close]'),
+      modalh: document.querySelector('[data-modalh]'),
+      body: document.querySelector('.body'),
+    };
+    refsBuyNow.openModalhtn.addEventListener('click', toggleModalh);
+    refsBuyNow.closeModalhtn.addEventListener('click', toggleModalh);
+    function toggleModalh() {
+      refsBuyNow.modalh.classList.toggle('is-hidden');
+      refsBuyNow.body.classList.toggle('no-scroll');
+    }
+  })();
