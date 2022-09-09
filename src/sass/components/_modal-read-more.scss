@@ -23,25 +23,40 @@
   text-align: center;
   margin-bottom: 20px;
 }
-.video-imitation {
-  display: flex;
-  width: 224px;
-  height: 199px;
+.video {
   border-radius: 10px;
-  background-color: var(--secondary-title-color);
-  align-items: center;
-  justify-content: center;
+}
+.video-wrapper {
   margin-bottom: 20px;
 }
-.icon-play {
+/*.icon-play {
   display: block;
   fill: var(--white-color-text);
 
   height: 36px;
   width: 36px;
   cursor: pointer;
-}
+}*/
 .modal-read-more__discription {
   @include font(14px, 400, 20px);
   color: var(--secondary-title-color);
+}
+@media screen and (min-width: 768px) {
+  .modal-read-more {
+    width: 568px;
+    padding: 32px 60px;
+  }
+  .modal-read-more__title {
+    @include font(20px, 400, 28px);
+    margin-bottom: 32px;
+  }
+  .video {
+    width: 448px;
+  }
+  .video-wrapper {
+    margin-bottom: 32px;
+  }
+  .modal-read-more__discription {
+    @include font(16px, 400, 22px);
+  }
 }

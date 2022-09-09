@@ -5,7 +5,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 280px;
-  height: 355px;
+
   background-color: var(--white-color-text);
   border: 2px solid var(--hero-link-hero-color);
   border-radius: 10px;
@@ -52,4 +52,21 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+  .modal-locations {
+    width: 568px;
+    padding: 32px 60px;
+  }
+  .modal__title {
+    @include font(20px, 400, 28px);
+    margin-bottom: 32px;
+  }
+  .modal__map {
+    margin-bottom: 32px;
+  }
+  .modal__btn-map {
+    @include font(14px, 600, 17px);
+    padding: 12px 34px;
+  }
 }
