@@ -234,7 +234,7 @@
   .icon-arrow-right {
     height: 20px;
     width: 40px;
-    border-color: 2px solid var(--subtitle-color);
+    border-color: 2px var(--subtitle-color);
     transition: border-color var(--timing-duration) var(--timing-function),
       width var(--timing-duration) var(--timing-function);
   }
