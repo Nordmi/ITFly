@@ -220,25 +220,31 @@
 }
 
 .products-icon {
-  padding: 0;
-  transform: scale(1);
+  // transform: scale(1);
   background-color: transparent;
   border: none;
   display: block;
   margin: auto;
+  padding: 0;
   margin-bottom: 0px;
-}
-
-.icon-arrow-right {
-  height: 20px;
-  width: 40px;
-  border-color: 2px solid var(--subtitle-color);
   cursor: pointer;
-  transition: border-color var(--timing-duration) cubic-bezier(0.4, 0, 0.2, 1),
-    width var(--timing-duration) cubic-bezier(0.4, 0, 0.2, 1);
-}
-.icon-arrow-right:hover,
-.icon-arrow-right:focus {
-  border-color: 3px solid var(--subtitle-color);
-  width: 50px;
+  line-height: 0;
+  transition: background-color var(--timing-duration) var(--timing-function);
+
+  .icon-arrow-right {
+    height: 20px;
+    width: 40px;
+    border-color: 2px solid var(--subtitle-color);
+    transition: border-color var(--timing-duration) var(--timing-function),
+      width var(--timing-duration) var(--timing-function);
+  }
+
+  &:hover .icon-arrow-right {
+    width: 50px;
+  }
+
+  &:focus .icon-arrow-right {
+    border-color: 3px var(--subtitle-color);
+    width: 50px;
+  }
 }
