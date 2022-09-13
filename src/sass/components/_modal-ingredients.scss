@@ -3,8 +3,8 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  width: 100%;
-  height: 100%;
+//   width: 100%;
+//   height: 100%;
   background-color: transparent;
   transition: opacity var(--timing-function), var(--timing-duration),
     visibility var(--timing-function), var(--timing-duration);
@@ -67,8 +67,7 @@
 
 .ingredients-wrap {
   display: flex;
-  justify-content: space-between;
-  display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -80,7 +79,6 @@
   border-radius: 40px;
   @include font(10px, 400, 12px);
   color: var(--subtitle-color);
-  // margin-top: 24px;
   margin-bottom: 40px;
 
   & > .ingredients-circle__title {
@@ -94,82 +92,143 @@
 }
 
 .filling-inner {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  top: -0.5px;
-  left: 2px;
-  width: 43px;
-  height: 43px;
-  border-radius: 50%;
-  background-color: #9cbe8f;
-  border-radius: 2px solid #9cbe8f;
-  box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
-
-  & > .filling-inner__grams {
-    position: absolute;
-    @include font(10px, 500, 28px);
-    color: var(--subtitle-color);
-    margin-bottom: 28px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	top: -0.6px;
+	left: 2.5px;
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+	background-color: #9cbe8f;
+	border: 2px solid #9cbe8f;
+	box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+  
+	& > .filling-inner__grams {
+	  position: absolute;
+	  @include font(10px, 500, 28px);
+	  color: var(--subtitle-color);
+	  margin-bottom: 28px;
+	}
   }
-}
+  
+  .ingredients-item {
+	margin-bottom: 37px;
+  }
+  
+  .ingredients-title {
+	@include font(20px, 500, 28px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: var(--subtitle-color);
+	margin-bottom: 24px;
+  }
+  
+  .filling-title {
+	@include font(14px, 400, 25px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.04em;
+	color: var(--subtitle-color);
+	margin-bottom: 11px;
+  }
+  
+  .filling-contacts__label {
+	margin-top: 48px;
+	margin-bottom: 16px;
+  }
+  
+  .modal-filling-input {
+	width: 100%;
+	height: 42px;
+	background-color: rgba(248, 210, 78, 0.1);
+	border: 1px solid var(--background-green-color);
+	border-radius: 10px;
+	padding: 8px 12px;
+	@include font(14px, 400, 20px);
+	color: var(--subtitle-color);
+	display: block;
+	margin-bottom: 16px;
+  }
 
-.ingredients-item {
-  margin-bottom: 37px;
-}
+  .modal-filling-comment {
+	width: 100%;
+	height: 84px;
+	background-color: rgba(248, 210, 78, 0.1);
+	border: 1px solid var(--background-green-color);
+	border-radius: 10px;
+	padding: 11px;
+	@include font(14px, 400, 20px);
+	color: var(--subtitle-color);
+	display: block;
+	margin-bottom: 24px;
+  }  
+    
+@media screen and (min-width: 768px) {
+	.filling {
+		width: 528px;
+		height: 995px;
+		padding: 32px 20px;
+	  }
+	  
+	  .filling-close-btn {
+		top: 32px;
+	  }
+		
+	  .ingredients-product-img {
+		margin-top: 24px;
+	  }
+	  
+	  .ingredients-wrap {
+		gap: 20px;
+	  }
 
-.ingredients-title {
-  @include font(20px, 500, 28px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--subtitle-color);
-  margin-bottom: 24px;
-}
+	  .ingredients-circle {
+		width: 65px;
+		height: 90px;
+		margin-bottom: 48px;
+		& > .ingredients-circle__title {
+			margin-top: 61px;
+			@include font(14px, 400, 16px);
+		}
+	  }
 
-.filling-title {
-  @include font(14px, 400, 25px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: var(--subtitle-color);
-  margin-bottom: 11px;
-}
+	  .filling-inner {
+		top: -0.5px;
+		left: 4.25px;
+		width: 53px;
+		height: 53px;
+		& > .filling-inner__grams {
+			@include font(12px, 500, 28px);
+		  }
+	  }
 
-.filling-contacts__label {
-  margin-top: 48px;
-  margin-bottom: 16px;
-}
+	  .filling-title {
+		@include font(14px, 500, 25px);
+	  }
+	  
+	  .filling-contacts__label {
+		margin-bottom: 32px;
+		margin-top: 48px;
+	  }
+	  
+	  .modal-filling-input {
+		width: 368px;
+		margin-left: 60px;
+		margin-right: 60px;
+	  }
 
-.modal-filling-input {
-  width: 100%;
-  height: 42px;
-  background-color: rgba(248, 210, 78, 0.1);
-  border: 1px solid var(--background-green-color);
-  border-radius: 10px;
-  padding: 8px 12px;
-  @include font(14px, 400, 20px);
-  color: var(--subtitle-color);
-  display: block;
-  margin-bottom: 16px;
-}
-
-.modal-filling-comment {
-  width: 100%;
-  height: 84px;
-  background-color: rgba(248, 210, 78, 0.1);
-  border: 1px solid var(--background-green-color);
-  border-radius: 10px;
-  padding: 11px;
-  @include font(14px, 400, 20px);
-  color: var(--subtitle-color);
-  display: block;
-  margin-bottom: 24px;
-}
+	  .modal-filling-comment {
+		width: 368px;
+		margin-left: 60px;
+		margin-right: 60px;	  
+	}
+	  }
 
 .modal-filling-btn {
   background-color: var(--hero-link-hero-color);
